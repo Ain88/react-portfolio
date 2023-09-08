@@ -91,6 +91,7 @@ export const projectsData = [
       "Built company website using asp.net core.",
     tags: ["Asp.net Core", "C#", "Microsoft SQL", "Javascript", "Html", "Css"],
     imageUrl: ampmImg,
+    link: 'https://ampmmobile.com/'
   },
   {
     title: "Immigration Company Website",
@@ -98,6 +99,7 @@ export const projectsData = [
       "Built immigration company website using wordpress",
     tags: ["Wordpress", "Elementor", "Canva", "Javascript", "Html"],
     imageUrl: petercanImg,
+    link: 'https://petercan.ca/'
   },
   {
     title: "User Manual Web Application",
@@ -105,6 +107,7 @@ export const projectsData = [
       "Built user manual web application and admin page using asp.net core.",
     tags: ["Asp.net Core", "C#", "Microsoft SQL", "Javascript", "Html"],
     imageUrl: sddocsImg,
+    link: 'https://docs.sdcloudpos.com/'
   },
 ] as const;
 
