@@ -5,6 +5,8 @@ import { LuGraduationCap } from "react-icons/lu";
 import ampmImg from "@/public/project-ampm-mobile.png";
 import sddocsImg from "@/public/project-sddocs.png";
 import petercanImg from "@/public/project-petercan.png";
+import pandadocImg from "@/public/project-pandadoc.png";
+import aivoiceImg from "@/public/project-ai-voice.png";
 
 export const links = [
   {
@@ -36,25 +38,33 @@ export const links = [
 export const experiencesData = [
   {
     title: "Graduated University",
-    location: "South Korea",
+    location: "Incheon, South Korea",
     description:
-      "I majored in Political Science and Business at the University of Incheon.",
+      "Completed my Bachelor's degree in Political Science and International Trade at Incheon National University.",
     icon: React.createElement(LuGraduationCap),
     date: "2013",
   },
   {
     title: "Document Controller",
-    location: "South Korea",
+    location: "Pangyo, South Korea",
     description:
-      "I worked as a document controller for 8 months at Samsung Techwin. My responsibilities included checking the quality of documents and coordinating documents between customers and engineers.",
+      "Worked at Samsung Techwin ensuring document accuracy, consistency, and revision control, and coordinated workflows between engineers and external partners.",
     icon: React.createElement(CgWorkAlt),
     date: "2013",
+  },
+  {
+    title: "Intern",
+    location: "Kelowna, BC",
+    description:
+      "Worked at WTFast conducting game testing and market research on the Korean gaming industry to improve product experience and strategy.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2014 - 2016",
   },
   {
     title: "Graduated College",
     location: "Kelowna, BC",
     description:
-      "I studied Computer Information Systems at Okanagan College.",
+      "Earned a diploma in Computer Information Systems from Okanagan College.",
     icon: React.createElement(LuGraduationCap),
     date: "2016",
   },
@@ -62,15 +72,15 @@ export const experiencesData = [
     title: "Graduated Bootcamp",
     location: "Online",
     description:
-      "I studied Full Stack Developer Course at Openclassrooms.",
+      "Completed a Full Stack Software Developer bootcamp through OpenClassrooms.",
     icon: React.createElement(LuGraduationCap),
-    date: "2020",
+    date: "2021",
   },
   {
     title: "Web Developer",
     location: "West Vancouver, BC",
     description:
-      "I worked at Fedroc Holdings as a web developer, where my role involved managing and creating new websites for continuous improvement.",
+      "Maintained and improved Magento/WooCommerce sites and developed new features using LAMP stack and Bootstrap.",
     icon: React.createElement(CgWorkAlt),
     date: "2020 - 2021",
   },
@@ -78,38 +88,64 @@ export const experiencesData = [
     title: "Web Developer",
     location: "Port Coquitlam, BC",
     description:
-      "I'm working as a web developer, where my role involved managing and creating new websites/web apps for continuous improvement.",
-      icon: React.createElement(CgWorkAlt),
-    date: "2021 - present",
+      "Built responsive landing pages, dashboards, and internal apps using ASP.NET MVC, HTML/CSS, and JavaScript.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2021 - 2023",
+  },
+  {
+    title: "ASP.NET Developer",
+    location: "New Westminster, BC",
+    description:
+      "Maintaining and enhancing ASP.NET-based internal tools and applications, integrating APIs like PandaDoc and AWS.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2023 - Present",
   },
 ] as const;
 
+
 export const projectsData = [
+  {
+    title: "AI Voice Integration",
+    description:
+      "Integrated AI voice services into CRM to improve support workflows and streamline communication.",
+    tags: ["ASP.NET", "C#", "Microsoft SQL", "JavaScript", "HTML", "CSS"],
+    imageUrl: aivoiceImg,
+    link: "", // add if you have a demo or video
+  },
+  {
+    title: "PandaDoc Integration",
+    description:
+      "Embedded PandaDoc into CRM systems for seamless document generation and e-signing.",
+    tags: ["ASP.NET", "C#", "Microsoft SQL", "JavaScript", "HTML", "CSS"],
+    imageUrl: pandadocImg,
+    link: "", // add if there's something viewable
+  },
   {
     title: "AMPM Mobile Website",
     description:
-      "Built company website using asp.net core.",
-    tags: ["Asp.net Core", "C#", "Microsoft SQL", "Javascript", "Html", "Css"],
+      "Developed the official company website using ASP.NET Core and Bootstrap.",
+    tags: ["ASP.NET", "C#", "Microsoft SQL", "JavaScript", "HTML", "CSS"],
     imageUrl: ampmImg,
-    link: 'https://ampmmobile.com/'
+    link: "https://ampmmobile.com",
   },
   {
-    title: "Immigration Company Website",
+    title: "Immigration Website",
     description:
-      "Built immigration company website using wordpress",
-    tags: ["Wordpress", "Elementor", "Canva", "Javascript", "Html"],
+      "Built a professional website for an immigration consulting company using WordPress and Elementor.",
+    tags: ["WordPress", "Elementor", "Canva", "JavaScript", "HTML"],
     imageUrl: petercanImg,
-    link: 'https://petercan.ca/'
+    link: "https://petercan.ca",
   },
   {
-    title: "User Manual Web Application",
+    title: "User Manual Web App",
     description:
-      "Built user manual web application and admin page using asp.net core.",
-    tags: ["Asp.net Core", "C#", "Microsoft SQL", "Javascript", "Html"],
+      "Built an internal user documentation portal with an admin backend.",
+    tags: ["ASP.NET", "C#", "Microsoft SQL", "JavaScript", "HTML"],
     imageUrl: sddocsImg,
-    link: 'https://docs.sdcloudpos.com/'
+    link: "https://docs.sdcloudpos.com",
   },
 ] as const;
+
 
 export const skillsData = [
   "HTML",
@@ -120,17 +156,21 @@ export const skillsData = [
   "Next.js",
   "Node.js",
   "Git",
-  "Tailwind",
+  "Tailwind CSS",
   "ASP.NET",
   "C#",
-  "Mysql",
+  "MySQL",
   "Microsoft SQL",
-  "Framer Motion",
-  "Wordpress",
+  "AWS",
+  "Azure",
+  "WordPress",
+  "Elementor",
   "Bootstrap",
   "Figma",
-  "Shopify",
+  "Photoshop",
   "PHP",
   "Webflow",
-  "Git"
+  "SCSS",
+  "jQuery",
+  "Canva"
 ] as const;

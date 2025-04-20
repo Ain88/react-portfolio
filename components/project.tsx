@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useState, useRef } from "react";
 import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -13,6 +13,7 @@ export default function Project({
   imageUrl,
   link
 }: ProjectProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false); // State for modal
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -20,6 +21,16 @@ export default function Project({
   });
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
+
+  // Function to handle opening the modal
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  // Function to handle closing the modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <motion.div
@@ -36,9 +47,20 @@ export default function Project({
           <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
-          <a href={link} target="_blank" rel="noopener noreferrer" className="text-black/[0.7] hover:text-black/[0.9] underline mt-4 mb-4">
-            Project Link
-          </a>
+          <div className="mt-4 mb-4">
+            {link ? (
+              <a
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-black/[0.7] hover:text-black/[0.9] underline"
+              >
+                Project Link
+              </a>
+            ) : (
+              <span className="text-gray-500 italic">No link for this project</span>
+            )}
+          </div>
           <ul className="flex flex-wrap mt-2 mb-2 gap-2 sm:mt-2 mb-2">
             {tags.map((tag, index) => (
               <li
@@ -51,7 +73,8 @@ export default function Project({
           </ul>
         </div>
 
-        <div className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
+        <div
+        className="absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
           transition 
           group-hover:scale-[1.04]
           group-hover:-translate-x-3
@@ -62,15 +85,36 @@ export default function Project({
           group-even:group-hover:translate-y-3
           group-even:group-hover:rotate-2
 
-          group-even:right-[initial] group-even:-left-40">
-          <Image
-            src={imageUrl}
-            alt="Project I worked on"
-            quality={95}
-          />
-        </div>
-
+          group-even:right-[initial] group-even:-left-40 cursor-pointer" // Add cursor-pointer class here
+        onClick={openModal}
+      >
+        <Image
+          src={imageUrl}
+          alt="Project I worked on"
+          quality={95}
+        />
+      </div>
       </section>
+
+      {/* Modal for image */}
+      {isModalOpen && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
+          <div className="relative">
+            <button
+              onClick={closeModal} // Close modal when button is clicked
+              className="absolute top-4 right-4 text-white text-2xl font-bold"
+            >
+              X
+            </button>
+            <Image
+              src={imageUrl}
+              alt="Project I worked on"
+              quality={95}
+              className="max-w-[90%] max-h-[80vh] object-contain"
+            />
+          </div>
+        </div>
+      )}
     </motion.div>
   );
 }

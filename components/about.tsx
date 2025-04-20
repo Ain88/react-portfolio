@@ -17,29 +17,24 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
+      <SectionHeading>About Me</SectionHeading>
       <p className="mb-3">
-        After graduating with a degree in{" "}
-        <span className="font-medium">Political Science and Business</span>, I decided to pursue my
-        passion for programming. I enrolled in a Computer Science Diploma and learned{" "}
-        <span className="font-medium">Computer Programming</span>.{" "}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My focus
-        is{" "}
-        <span className="font-medium">
-          Asp.net core mvc, React
-        </span>
-        . I am also familiar with Web design and tools. I am always looking to
-        learn new technologies.
+        After earning a degree in{" "}
+        <span className="font-medium">Political Science and Business</span>, I
+        transitioned into the tech field by completing a Computer Science Diploma. 
+        With over five years of experience, I have worked on a variety of projects
+        in web development, contributing to both technical tasks and coordinating 
+        aspects like communication and planning for successful execution. I specialize in{" "}
+        <span className="font-medium">ASP.NET Core MVC</span> and web development, 
+        with a constant drive to learn and adopt new technologies.
       </p>
 
       <p>
         <span className="italic">When I'm not coding</span>, I enjoy playing
-        badminton, and cooking. I also enjoy{" "}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about{" "}
-        <span className="font-medium">no code web design tools</span>.
+        badminton, cooking, and continuously expanding my knowledge. I’m currently 
+        exploring the utilization of{" "}
+        <span className="font-medium">AI tools and technologies</span> to enhance 
+        my skill set and drive innovation in my projects.
       </p>
     </motion.section>
   );
